@@ -9,4 +9,7 @@ public interface UserService {
     UserInfoDTO getUserInfoByLogin(String login);
     User getUserByLogin(String login);
     List<UserInfoDTO> getAllUsers();
+    void deleteById(int id);
+    UserInfoDTO save(UserInfoDTO userInfoDTO);
+    UserInfoDTO update(UserInfoDTO userInfoDTO);
 }
