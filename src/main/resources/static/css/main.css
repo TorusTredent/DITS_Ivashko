@@ -1431,3 +1431,110 @@ main .form-select:focus {
         margin-top: 25px;
     }
 }
+
+.field-add-new-user {
+    box-sizing: border-box;
+
+    position: absolute;
+    height: 50px;
+    left: 35.92%;
+    right: 53.5%;
+    top: 135px;
+
+    border: 1px solid #777777;
+    border-radius: 10px;
+}
+
+.span-add-new-user {
+    position: absolute;
+    width: 119px;
+    height: 28px;
+    left: 760px;
+    top: 146px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.message-delete-modal-title {
+    position: absolute;
+    left: 14.4%;
+    right: 14.35%;
+    top: 16.5%;
+    bottom: 72.25%;
+
+    /* h2 */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 45px;
+
+    text-align: center;
+
+    color: #000000;
+}
+
+.message-delete-modal-question {
+    position: absolute;
+    left: 14.6%;
+    right: 14.65%;
+    top: 33.5%;
+    bottom: 47%;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+
+    text-align: center;
+
+    color: #141414;
+}
+
+.message-delete-modal-warning {
+    position: absolute;
+    left: 11.8%;
+    right: 11.7%;
+    top: 60.25%;
+    bottom: 33.5%;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+    color: #141414;
+}
+
+.message-delete-button-cancel{
+    position: absolute;
+    left: 3%;
+    right: 53%;
+    top: 75%;
+    bottom: 12.5%;
+
+    background: #F78F0F;
+
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.message-delete-button-accept{
+    position: absolute;
+    left: 53%;
+    right: 3%;
+    top: 75%;
+    bottom: 12.5%;
+
+    background: #008f02;
+
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}

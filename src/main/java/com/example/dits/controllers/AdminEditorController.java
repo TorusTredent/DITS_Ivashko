@@ -24,13 +24,13 @@ public class AdminEditorController {
     }
 
     @ResponseBody
-    @GetMapping("/get/user/all")
+    @GetMapping("/get/all")
     public List<UserInfoDTO> getAll() {
         return userService.getAllUsers();
     }
 
     @ResponseBody
-    @DeleteMapping("/delete/user")
+    @DeleteMapping("/user")
     public List<UserInfoDTO> deleteById(@RequestParam int id) {
         userService.deleteById(id);
         return getAll();
@@ -44,7 +44,7 @@ public class AdminEditorController {
     }
 
     @ResponseBody
-    @PutMapping("/update/user")
+    @PutMapping("/user")
     public List<UserInfoDTO> updateUser(@RequestBody UserInfoDTO userInfoDTO) {
         userService.update(userInfoDTO);
         return getAll();
