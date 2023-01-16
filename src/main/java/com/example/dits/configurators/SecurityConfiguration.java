@@ -35,15 +35,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.jdbcAuthentication().dataSource(dataSource)
                 .passwordEncoder(passwordEncoder)
                 .usersByUsernameQuery("select login, password, 'true' from users" +
-                        " join users_role on users.userId = users_role.userId where login =?")
-                .authoritiesByUsernameQuery("select login, roleName from users join users_role on users.userId = users_role.userId join role on  +\n" +
-                        "users_role.roleId = role.roleId where login = ?");
+                        " join users_role on users.user_id = users_role.user_id where login =?")
+                .authoritiesByUsernameQuery("select login, role_name from users join users_role on users.user_id = users_role.user_id join role on  +\n" +
+                        "users_role.role_id = role.role_id where login = ?");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                     .antMatchers("/", "/login").permitAll()
+                    .antMatchers("/h2/**").permitAll()
                     .antMatchers("/","/user/**").hasRole("USER")
                     .antMatchers("/","/admin/**").hasRole("ADMIN")
                 .and().formLogin().loginPage("/login")
