@@ -18,25 +18,24 @@ public class AdminLoggingAspects {
 
     @After("com.example.dits.aspects.Pointcuts.addUser()")
     public void loggingAfterAddUser(JoinPoint joinPoint) {
-        Object[] args = joinPoint.getArgs();
-        UserInfoDTO user = (UserInfoDTO) args[0];
-        String message = "New user (" + user.getLogin() + ") is created, time: " + LocalDateTime.now();
-        log.info(message);
+        UserInfoDTO user = (UserInfoDTO) joinPoint.getArgs()[0];
+        log.info(getMessage("user", user.getLogin()));
     }
 
     @After("com.example.dits.aspects.Pointcuts.addTopic()")
     public void loggingAfterAddTopic(JoinPoint joinPoint) {
-        Object[] args = joinPoint.getArgs();
-        TopicDTO topic = (TopicDTO) args[0];
-        String message = "New topic (" + topic.getTopicName() + ") is created, time: " + LocalDateTime.now();
-        log.info(message);
+        TopicDTO topic = (TopicDTO) joinPoint.getArgs()[0];
+        log.info(getMessage("topic", topic.getTopicName()));
     }
 
     @After("com.example.dits.aspects.Pointcuts.addTest()")
     public void loggingAfterAddTest(JoinPoint joinPoint) {
-        Object[] args = joinPoint.getArgs();
-        TestInfoDTO test = (TestInfoDTO) args[0];
-        String message = "New test (" + test.getName() + ") was created, time: " + LocalDateTime.now();
-        log.info(message);
+        TestInfoDTO test = (TestInfoDTO) joinPoint.getArgs()[0];
+        log.info(getMessage("test", test.getName()));
+    }
+
+
+    private String getMessage(String action, String name) {
+        return "New " + action + " (" + name + ") was created, time: " + LocalDateTime.now();
     }
 }
