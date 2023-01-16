@@ -90,15 +90,6 @@
             <version>3.5</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
         <dependency>
             <groupId>com.h2database</groupId>
@@ -141,11 +132,6 @@
             <version>1.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.heroku.sdk/heroku-jdbc -->
-        <dependency>
-            <groupId>com.heroku.sdk</groupId>
-            <artifactId>heroku-jdbc</artifactId>
-            <version>0.1.1</version>
-        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
